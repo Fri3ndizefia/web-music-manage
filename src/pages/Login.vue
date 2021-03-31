@@ -1,6 +1,6 @@
 <template>
   <div class="login-wrap">
-    <div class="ms-title">music 后台管理登录</div>
+    <div class="ms-title">music management</div>
     <div class="ms-login">
       <el-form :model="ruleForm" :rules="rules" ref="ruleForm">
         <el-form-item prop="username">
@@ -47,6 +47,7 @@ export default {
       getLoginStatus(params)
         .then((res) => {
           if (res.code === 1) {
+            localStorage.setItem('userName', this.ruleForm.username)
             this.$router.push('/info')
             this.notify('Login successfully', 'success')
           } else {

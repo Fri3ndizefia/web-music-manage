@@ -10,8 +10,26 @@ export default new Router({
       component: resolve => require(['../pages/Login.vue'], resolve)
     },
     {
-      path: '/info',
-      component: resolve => require(['../pages/InfoPage'], resolve)
+      path: '/home',
+      component: resolve => require(['../components/Home'], resolve),
+      children: [
+        {
+          path: '/info',
+          component: resolve => require(['../pages/InfoPage'], resolve)
+        },
+        {
+          path: '/consumer',
+          component: resolve => require(['../pages/ConsumerPage'], resolve)
+        },
+        {
+          path: '/singer',
+          component: resolve => require(['../pages/SingerPage'], resolve)
+        },
+        {
+          path: '/songList',
+          component: resolve => require(['../pages/SongListPage'], resolve)
+        }
+      ]
     }
   ]
 })
