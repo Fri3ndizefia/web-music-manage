@@ -1,6 +1,11 @@
-# music-manage
+# Music-manage
+# 音乐网站后台管理页面
 
-> A Vue.js project
+框架：Vue、Vue-router、Vuex
+IDE：WebStorm
+
+
+
 
 ## Build Setup
 
